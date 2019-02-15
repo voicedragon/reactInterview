@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+* {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+#modal2 {
+  margin: 0;
+  padding: 0;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  color: white;
+  z-index: 5000;
+
+  align-items: start;
+  justify-content: center;
+
+  border-bottom: 200px solid rgba(0, 0, 0, 0.8);
+}
+
+.modalButtons {
+  width: 100%;
+  background: white;
+  border: none;
+}
+
+.feedbackDiv {
+  margin-top: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50%);
+}
+
+.modalDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p,
+div {
+  font-size: 16px !important;
+}
+
+.categoryp {
+  margin: 0;
+}
+
+.catButton {
+  background: white;
+}
+h1,
+h2 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.catButton {
+  width: 100px;
+  height: 50px;
+  margin: 1px;
+}
+
+picture,
+img {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+  /*border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+ */
+}
+
+.modalImage {
+  height: 400px;
+  width: 400px;
+  cursor: auto !important;
+  border-radius: 0 !important;
+}
+#film {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-items: center;
+  align-items: start;
+  position: relative;
+  top: 2vh;
+  width: 80vw;
+  grid-column-gap: 10px;
+  grid-row-gap: 50px;
+  min-height: 100vh;
+}
+
+#categories {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#categories2 {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 2vh;
+  left: -34px;
+  z-index: 4000;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 970px) {
+  #film {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  #film {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalImage {
+    width: 280px;
+  }
+
+  .ratioBarModal,
+  .buttonsDivModal {
+    width: 280px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  #modal {
+    justify-content: start !important;
+  }
+
+  .catButton,
+  input,
+  label {
+    width: 75px !important;
+  }
+}
+
+@media (max-height: 320px) {
+  .catButton {
+    height: 25px;
+  }
+}
